@@ -1,9 +1,9 @@
 {
-    "Identifier": "",
-    "Slug": "",
-    "Status": "",
-    "Title": "",
-    "Description": "",
+    "Identifier": "eos44zp",
+    "Slug": "ncats-cyp3a4-inh",
+    "Status": "In progress",
+    "Title": "Inhibition of CYP3A4",
+    "Description": "Screening library included the NCATS Pharmaceutical Collection, comprising clinically approved low-molecular-weight compounds, and an annotated library consisting of drug-like compounds.",
     "Mode": "",
     "Task": [],
     "Input": [],
@@ -12,8 +12,12 @@
     "Output Type": [],
     "Output Shape": "",
     "Interpretation": "",
-    "Tag": [],
-    "Publication": "",
-    "Source Code": "",
-    "License": ""
+    "Tag": [
+        "CYP450",
+        "ADME",
+        "Metabolism"
+    ],
+    "Publication": "https://dmd.aspetjournals.org/content/49/9/822",
+    "Source Code": "https://github.com/ncats/ncats-adme",
+    "License": "None"
 }
