@@ -1,1 +1,6 @@
-mock.txt filter=lfs diff=lfs merge=lfs -text
+model/checkpoints/CYP2C9_inhib/* filter=lfs diff=lfs merge=lfs -text
+model/checkpoints/CYP2C9_subs/* filter=lfs diff=lfs merge=lfs -text
+model/checkpoints/CYP2D6_inhib/* filter=lfs diff=lfs merge=lfs -text
+model/checkpoints/CYP2D6_subs/* filter=lfs diff=lfs merge=lfs -text
+model/checkpoints/CYP3A4_inhib/* filter=lfs diff=lfs merge=lfs -text
+model/checkpoints/CYP3A4_subs/* filter=lfs diff=lfs merge=lfs -text
