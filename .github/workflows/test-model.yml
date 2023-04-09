@@ -22,6 +22,7 @@ jobs:
       - name: Source conda
         run: source $CONDA/etc/profile.d/conda.sh
       
+      
       - name: Install dependencies
         run: |
           source activate
@@ -29,6 +30,13 @@ jobs:
           conda install git-lfs -c conda-forge
           git-lfs install
           conda install gh -c conda-forge
+      - name: Install ersilia
+        run: |
+          source activate
+          python --version
+          echo "After conda init"
+          conda init
+          python -m pip install git+https://github.com/ersilia-os/ersilia.git
   
       - name: Update metadata to AirTable
         id: update-metadata-to-airtable
