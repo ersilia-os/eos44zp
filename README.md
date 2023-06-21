@@ -1,6 +1,6 @@
 # CYP450 metabolism
 
-Analysis of metabolic stability, determining the inhibition of CYP450 activity and whether the compounds are a substrate for the CYP450 enzimes. The data to build these models is publicly available at PubChem, AID1645840, AID1645841, AID1645842. The tested cyps include CYP2C9, CYP2D6 and CYP3A4.
+Analysis of metabolic stability, determining the inhibition of CYP450 activity and whether the compounds are a substrate for the CYP450 enzymes. The data to build these models is publicly available at PubChem, AID1645840, AID1645841, AID1645842. The tested cyps include CYP2C9, CYP2D6 and CYP3A4.
 
 ## Identifiers
 
@@ -22,6 +22,10 @@ Analysis of metabolic stability, determining the inhibition of CYP450 activity a
 * [Publication](https://dmd.aspetjournals.org/content/49/9/822)
 * [Source Code](https://github.com/ncats/ncats-adme)
 * Ersilia contributor: [GemmaTuron](https://github.com/GemmaTuron)
+
+## Ersilia model URLs
+* [GitHub](https://github.com/ersilia-os/eos44zp)
+* [AWS S3](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos44zp.zip)
 
 ## Citation
 
