@@ -1,7 +1,7 @@
 name: Model Test on push
 
 on:
-  push: 
+  push:
     branches: ['main']
   workflow_dispatch:
 
@@ -38,6 +38,11 @@ jobs:
           echo "After conda init"
           conda init
           python -m pip install git+https://github.com/ersilia-os/ersilia.git
+
+      - name: Set Swap Space  # Add this step
+        uses: pierotofy/set-swap-space@master
+        with:
+          swap-size-gb: 14
   
       - name: Update metadata to AirTable
         id: update-metadata-to-airtable
