@@ -13,8 +13,8 @@ jobs:
       - name: Checkout persist credentials
         uses: actions/checkout@8e5e7e5ab8b370d6c329ec480221332ada57f0ab # pin@v3.5.2
         with:
-          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
-          fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
+          persist-credentials: false
+          fetch-depth: 0
           lfs: 'true'
       
       - name: Add conda to system path
@@ -39,10 +39,10 @@ jobs:
           conda init
           python -m pip install git+https://github.com/ersilia-os/ersilia.git
 
-      - name: Set Swap Space  # Add this step
+      - name: Set Swap Space
         uses: pierotofy/set-swap-space@master
         with:
-          swap-size-gb: 14
+          swap-size-gb: 10
   
       - name: Update metadata to AirTable
         id: update-metadata-to-airtable
@@ -99,6 +99,17 @@ jobs:
           name: debug-logs
           retention-days: 1
           path: /home/runner/eos/console.log
+          
+      - name: Free Disk Space (Ubuntu)
+        uses: jlumbroso/free-disk-space@main
+        with:
+          tool-cache: false
+          android: true
+          dotnet: true
+          haskell: true
+          large-packages: true
+          docker-images: false
+          swap-storage: false
           
       - name: Shuffle assignees
         id: shuffle
