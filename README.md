@@ -26,6 +26,7 @@ Analysis of metabolic stability, determining the inhibition of CYP450 activity a
 ## Ersilia model URLs
 * [GitHub](https://github.com/ersilia-os/eos44zp)
 * [AWS S3](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos44zp.zip)
+* [DockerHub](https://hub.docker.com/r/ersiliaos/eos44zp) (AMD64)
 
 ## Citation
 
