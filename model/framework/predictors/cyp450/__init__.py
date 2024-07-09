@@ -12,6 +12,15 @@ sys.path.append(os.path.join(root, ".."))
 cyp_base_models_path = os.path.abspath(os.path.join(root, '../../../checkpoints'))
 print(cyp_base_models_path)
 
+cyp450_models = [
+        'CYP2C9_inhib',
+        'CYP2C9_subs',
+        'CYP2D6_inhib',
+        'CYP2D6_subs',
+        'CYP3A4_inhib',
+        'CYP3A4_subs'
+]
+
 def load_models():
 
     print(f'Loading CYP450 random forest models', file=sys.stdout)
@@ -35,4 +44,12 @@ def load_models():
     return cyp450_models_dict
     
 
-cyp450_models_dict = load_models()
+# cyp450_models_dict = load_models() # We are bypassing this because this function loads all ~5G worth of models into memory at the same time
+
+def load_single_model(model_name, model_number):
+    cyp450_model_path = os.path.join(cyp_base_models_path, model_name, "model_{}".format(model_number))
+    if path.exists(cyp450_model_path) and os.path.getsize(cyp450_model_path) > 0:
+        with open(cyp450_model_path, 'rb') as pkl_file:
+            return pickle.load(pkl_file)
+    else:
+        return None
