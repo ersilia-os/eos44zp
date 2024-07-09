@@ -6,7 +6,7 @@ from ..features.morgan_fp import MorganFPGenerator
 from ..utilities.utilities import get_processed_smi
 from rdkit import Chem
 from ..features.rdkit_descriptors import RDKitDescriptorsGenerator
-from ..cyp450 import cyp450_models_dict
+from ..cyp450 import load_single_model, cyp450_models
 import csv
 
 class CYP450Predictor:
@@ -97,19 +97,18 @@ class CYP450Predictor:
 
         features = np.append(self.morgan_fp_matrix, self.rdkit_desc_matrix, axis=1)
 
-        for model_name in cyp450_models_dict.keys():
+        for model_name in cyp450_models:
             print(model_name)
             error_threshold_length = len(self.predictions_df.index)
-            models = cyp450_models_dict[model_name]
-            print(models)
-            if len(models) == 0:
-                print(model_name, "did not work")
-                continue     
-            model_has_error = False
             probs_matrix = np.ma.empty((64, features.shape[0]))
             probs_matrix.mask = True
             for model_number in range(0, 64):
-                probs = models[f'model_{model_number}'].predict_proba(features)
+                model = load_single_model(model_name, model_number)
+                if model is None:
+                    print(model_name, "did not work")
+                    break
+                model_has_error = False
+                probs = model.predict_proba(features)
                 probs_matrix[model_number, :probs.shape[0]] = probs.T[1]
                 if model_has_error == False and error_threshold_length > len(probs):
                     model_has_error = True
