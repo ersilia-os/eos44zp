@@ -1,0 +1,7 @@
+name,type,direction,description
+CYP2C9_inhib,float,high,Probability of inhibition of the CYP2C9
+CYP2C9_subs,float,high,Probability of being metabolized by CYP2C9
+CYP2D6_inhib,float,high,Probability of inhibition of the CYP2D6
+CYP2D6_subs,float,high,Probability of being metabolized by CYP2D6
+CYP3A4_inhib,float,high,Probability of inhibition of the CYP3A4
+CYP3A4_subs,float,high,Probability of being metabolized by CYP3A4
