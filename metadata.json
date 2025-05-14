@@ -3,34 +3,45 @@
     "Slug": "ncats-cyp450",
     "Status": "Ready",
     "Title": "CYP450 metabolism",
-    "Description": "Analysis of metabolic stability, determining the inhibition of CYP450 activity and whether the compounds are a substrate for the CYP450 enzymes. The data to build these models is publicly available at PubChem, AID1645840, AID1645841, AID1645842. The tested cyps include CYP2C9, CYP2D6 and CYP3A4.",
-    "Mode": "Pretrained",
-    "Task": [
-        "Classification"
-    ],
+    "Description": "Analysis of metabolic stability, determining the inhibition of CYP450 activity and whether the compounds are a substrate for the CYP450 enzymes. The data to build these models is publicly available at PubChem, AID1645840, AID1645841, AID1645842. The tested cyps include CYP2C9, CYP2D6 and CYP3A4.\n",
+    "Source": "Local",
+    "Source Type": "External",
     "Input": [
         "Compound"
     ],
-    "Input Shape": "Single",
+    "Input Dimension": 1,
+    "Task": "Annotation",
+    "Subtask": "Activity prediction",
+    "Biomedical Area": [
+        "ADMET"
+    ],
+    "Target Organism": [
+        "Homo sapiens"
+    ],
     "Output": [
         "Probability"
     ],
-    "Output Type": [
-        "Float"
-    ],
-    "Output Shape": "List",
-    "Interpretation": "Probability of inhibiting the enzyme and probability of being a ubstrate of the enzyme. Activity in both indicates the compound is a ligand of the enzyme.",
+    "Output Dimension": 6,
+    "Output Consistency": "Fixed",
+    "Interpretation": "Probability of inhibiting the enzyme and probability of being a substrate of the enzyme. Activity in both indicates the compound is a ligand of the enzyme.",
     "Tag": [
         "CYP450",
         "ADME",
         "Metabolism"
     ],
     "Publication": "https://dmd.aspetjournals.org/content/49/9/822",
+    "Publication Type": "Peer reviewed",
+    "Publication Year": 2021,
     "Source Code": "https://github.com/ncats/ncats-adme",
     "License": "None",
-    "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos44zp.zip",
+    "Contributor": "GemmaTuron",
+    "Incorporation Date": "2023-04-06",
     "DockerHub": "https://hub.docker.com/r/ersiliaos/eos44zp",
     "Docker Architecture": [
         "AMD64"
+    ],
+    "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos44zp.zip",
+    "Deployment": [
+        "Local"
     ]
 }
