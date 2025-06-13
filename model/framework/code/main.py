@@ -35,7 +35,7 @@ with open(input_file, "r") as f:
     next(reader)  # skip header
     smiles_list = [r[0] for r in reader]
 
-print(smiles_list)
+# print(smiles_list)
 # run modeler
 outputs = my_model(smiles_list)
 
