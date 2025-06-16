@@ -42,8 +42,15 @@
     "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos44zp.zip",
     "DockerHub": "https://hub.docker.com/r/ersiliaos/eos44zp",
     "Docker Architecture": [
-        "AMD64"
+        "AMD64",
+        "ARM64"
     ],
     "Model Size": 5590.0,
-    "Environment Size": 2459.0
+    "Environment Size": 2459.0,
+    "Image Size": 19020.34,
+    "Computational Performance 1": 51.19,
+    "Computational Performance 2": 41.63,
+    "Computational Performance 3": 117.47,
+    "Computational Performance 4": 1038.98,
+    "Computational Performance 5": -1.0
 }
