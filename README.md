@@ -40,13 +40,18 @@ Below are the **Output Columns** of the model:
 - **Source:** `Local`
 - **Source Type:** `External`
 - **DockerHub**: [https://hub.docker.com/r/ersiliaos/eos44zp](https://hub.docker.com/r/ersiliaos/eos44zp)
-- **Docker Architecture:** `AMD64`
+- **Docker Architecture:** `AMD64`, `ARM64`
 - **S3 Storage**: [https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos44zp.zip](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos44zp.zip)
 
 ### Resource Consumption
 - **Model Size (Mb):** `5590`
 - **Environment Size (Mb):** `2459`
+- **Image Size (Mb):** `19020.34`
 
+**Computational Performance (seconds):**
+- 10 inputs: `51.19`
+- 100 inputs: `117.47`
+- 10000 inputs: `-1`
 
 ### References
 - **Source Code**: [https://github.com/ncats/ncats-adme](https://github.com/ncats/ncats-adme)
